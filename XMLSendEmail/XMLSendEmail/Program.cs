@@ -56,7 +56,24 @@ namespace XMLSendEmail
                 
                 // get password
                 Console.WriteLine("Enter a Password");
-                string passwd = Console.ReadLine();
+                var pass = string.Empty;
+                ConsoleKey key;
+                do
+                {
+                    var keyInfo = Console.ReadKey(intercept: true);
+                    key = keyInfo.Key;
+
+                    if (key == ConsoleKey.Backspace && pass.Length > 0)
+                    {
+                        Console.Write("\b \b");
+                        pass = pass[0..^1];
+                    }
+                    else if (!char.IsControl(keyInfo.KeyChar))
+                    {
+                        Console.Write("*");
+                        pass += keyInfo.KeyChar;
+                    }
+                } while (key != ConsoleKey.Enter);
 
                 var smtp = new SmtpClient
                 {
@@ -65,7 +82,7 @@ namespace XMLSendEmail
                     EnableSsl = true,
                     DeliveryMethod = SmtpDeliveryMethod.Network,
                     UseDefaultCredentials = false,
-                    Credentials = new NetworkCredential(fromAddress.Address, passwd)
+                    Credentials = new NetworkCredential(fromAddress.Address, pass)
                 };
 
                 using var message = new MailMessage(fromAddress, toAddress)
