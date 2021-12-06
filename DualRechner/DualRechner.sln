@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DualRechner", "DualRechner.csproj", "{8490F53D-B642-45BD-B1BC-701D1FDEBF3E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8490F53D-B642-45BD-B1BC-701D1FDEBF3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8490F53D-B642-45BD-B1BC-701D1FDEBF3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8490F53D-B642-45BD-B1BC-701D1FDEBF3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8490F53D-B642-45BD-B1BC-701D1FDEBF3E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8ADDB682-C97A-4E34-863B-C1501523FE88}
+	EndGlobalSection
+EndGlobal
