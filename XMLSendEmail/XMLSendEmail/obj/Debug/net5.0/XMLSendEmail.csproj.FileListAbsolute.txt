@@ -1,0 +1,16 @@
+C:\Users\ChristianLehnert\Downloads\chsharp_stuff\XMLSendEmail\XMLSendEmail\obj\Debug\net5.0\XMLSendEmail.csproj.AssemblyReference.cache
+C:\Users\ChristianLehnert\Downloads\chsharp_stuff\XMLSendEmail\XMLSendEmail\obj\Debug\net5.0\XMLSendEmail.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ChristianLehnert\Downloads\chsharp_stuff\XMLSendEmail\XMLSendEmail\obj\Debug\net5.0\XMLSendEmail.AssemblyInfoInputs.cache
+C:\Users\ChristianLehnert\Downloads\chsharp_stuff\XMLSendEmail\XMLSendEmail\obj\Debug\net5.0\XMLSendEmail.AssemblyInfo.cs
+C:\Users\ChristianLehnert\Downloads\chsharp_stuff\XMLSendEmail\XMLSendEmail\obj\Debug\net5.0\XMLSendEmail.csproj.CoreCompileInputs.cache
+C:\Users\ChristianLehnert\Downloads\chsharp_stuff\XMLSendEmail\XMLSendEmail\bin\Debug\net5.0\XMLSendEmail.exe
+C:\Users\ChristianLehnert\Downloads\chsharp_stuff\XMLSendEmail\XMLSendEmail\bin\Debug\net5.0\XMLSendEmail.deps.json
+C:\Users\ChristianLehnert\Downloads\chsharp_stuff\XMLSendEmail\XMLSendEmail\bin\Debug\net5.0\XMLSendEmail.runtimeconfig.json
+C:\Users\ChristianLehnert\Downloads\chsharp_stuff\XMLSendEmail\XMLSendEmail\bin\Debug\net5.0\XMLSendEmail.runtimeconfig.dev.json
+C:\Users\ChristianLehnert\Downloads\chsharp_stuff\XMLSendEmail\XMLSendEmail\bin\Debug\net5.0\XMLSendEmail.dll
+C:\Users\ChristianLehnert\Downloads\chsharp_stuff\XMLSendEmail\XMLSendEmail\bin\Debug\net5.0\ref\XMLSendEmail.dll
+C:\Users\ChristianLehnert\Downloads\chsharp_stuff\XMLSendEmail\XMLSendEmail\bin\Debug\net5.0\XMLSendEmail.pdb
+C:\Users\ChristianLehnert\Downloads\chsharp_stuff\XMLSendEmail\XMLSendEmail\obj\Debug\net5.0\XMLSendEmail.dll
+C:\Users\ChristianLehnert\Downloads\chsharp_stuff\XMLSendEmail\XMLSendEmail\obj\Debug\net5.0\ref\XMLSendEmail.dll
+C:\Users\ChristianLehnert\Downloads\chsharp_stuff\XMLSendEmail\XMLSendEmail\obj\Debug\net5.0\XMLSendEmail.pdb
+C:\Users\ChristianLehnert\Downloads\chsharp_stuff\XMLSendEmail\XMLSendEmail\obj\Debug\net5.0\XMLSendEmail.genruntimeconfig.cache
