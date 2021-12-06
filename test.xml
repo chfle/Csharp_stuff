@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<mail>
+	<to>christian.lehnert@ausbildung-bbw.de</to>
+	<from>Christian.lehnert.home@gmail.com</from>
+	<subject>Test Mail</subject>
+	<message>This is a email writen in XML.</message>
+</mail>
