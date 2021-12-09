@@ -24,7 +24,8 @@ namespace AccessWork
             {
                 connection.Open();
                 reader = cmd.ExecuteReader();
-
+                
+                Console.WriteLine("Show Users");
                 while (reader.Read())
                 {
                     Console.WriteLine($"{reader["name"]}, {reader["vorname"]}, {reader["personalnummer"]}, " +
@@ -37,8 +38,7 @@ namespace AccessWork
             {
                 Console.WriteLine(ex);
             }
-
-            // C:\Users\ChristianLehnert\Downloads
+            
         }
     }
 }
