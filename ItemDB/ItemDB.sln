@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItemDB", "ItemDB\ItemDB.csproj", "{813AD7EC-4EE0-46D2-95CC-23FF0ABACADB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{813AD7EC-4EE0-46D2-95CC-23FF0ABACADB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{813AD7EC-4EE0-46D2-95CC-23FF0ABACADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{813AD7EC-4EE0-46D2-95CC-23FF0ABACADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{813AD7EC-4EE0-46D2-95CC-23FF0ABACADB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
