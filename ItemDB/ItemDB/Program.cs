@@ -27,7 +27,6 @@ namespace ItemDB
             {
                 Console.WriteLine("======= Menu ======");
                 Console.WriteLine("Commands:");
-                Console.WriteLine("u - Update one or more items");
                 Console.WriteLine("d - delete one or more items");
                 Console.WriteLine("a - add a new item");
                 Console.WriteLine("f - show full table");
@@ -52,9 +51,6 @@ namespace ItemDB
 
                 switch (command)
                 {
-                    case "u":
-                        // update
-                        break;
                     case "d":
                         // delete
                         Console.WriteLine("Enter a delete Condition:");
