@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Data.OleDb;
-using System.Runtime.InteropServices;
 
 // C:\Users\ChristianLehnert\Downloads\chsharp_stuff\ItemDB\ItemDB\Database51.accdb
 
@@ -58,6 +57,18 @@ namespace ItemDB
                         break;
                     case "d":
                         // delete
+                        Console.WriteLine("Enter a delete Condition:");
+
+                        try
+                        {
+                            cmd.CommandText = $"DELETE FROM Item WHERE {Console.ReadLine()}";
+                            cmd.ExecuteNonQuery();
+                        }
+                        catch(Exception ex)
+                        {
+                           Console.WriteLine("Deletion failed");
+                           Console.WriteLine(ex.Message);
+                        }
                         break;
                     case "a":
                         // Add user
