@@ -30,4 +30,4 @@ C:\Users\ChristianLehnert\Downloads\chsharp_stuff\UserLogin\obj\Debug\net5.0\Use
 C:\Users\ChristianLehnert\Downloads\chsharp_stuff\UserLogin\obj\Debug\net5.0\ref\UserLogin.dll
 C:\Users\ChristianLehnert\Downloads\chsharp_stuff\UserLogin\obj\Debug\net5.0\UserLogin.pdb
 C:\Users\ChristianLehnert\Downloads\chsharp_stuff\UserLogin\obj\Debug\net5.0\UserLogin.genruntimeconfig.cache
-C:\Users\ChristianLehnert\Downloads\chsharp_stuff\UserLogin\obj\Debug\net5.0\UserLogin.csproj.CopyComplete
+C:\Users\ChristianLehnert\Downloads\chsharp_stuff\UserLogin\obj\Debug\net5.0\UserLogin.csproj.AssemblyReference.cache
