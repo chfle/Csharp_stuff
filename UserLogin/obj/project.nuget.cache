@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "jfE2mJk2peLbObIlSUyxbDgSMUDcd6hQv+CGoQEXizI2aXMopydu3S7jAarQX+Se98dwmJh7DbT3LdT4b1Ccew==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ChristianLehnert\\Downloads\\chsharp_stuff\\UserLogin\\UserLogin.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ChristianLehnert\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
+    "C:\\Users\\ChristianLehnert\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\ChristianLehnert\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.0\\system.configuration.configurationmanager.6.0.0.nupkg.sha512",
+    "C:\\Users\\ChristianLehnert\\.nuget\\packages\\system.data.oledb\\6.0.0\\system.data.oledb.6.0.0.nupkg.sha512",
+    "C:\\Users\\ChristianLehnert\\.nuget\\packages\\system.diagnostics.performancecounter\\6.0.0\\system.diagnostics.performancecounter.6.0.0.nupkg.sha512",
+    "C:\\Users\\ChristianLehnert\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
+    "C:\\Users\\ChristianLehnert\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\ChristianLehnert\\.nuget\\packages\\system.security.accesscontrol\\6.0.0\\system.security.accesscontrol.6.0.0.nupkg.sha512",
+    "C:\\Users\\ChristianLehnert\\.nuget\\packages\\system.security.cryptography.protecteddata\\6.0.0\\system.security.cryptography.protecteddata.6.0.0.nupkg.sha512",
+    "C:\\Users\\ChristianLehnert\\.nuget\\packages\\system.security.permissions\\6.0.0\\system.security.permissions.6.0.0.nupkg.sha512",
+    "C:\\Users\\ChristianLehnert\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
+    "C:\\Users\\ChristianLehnert\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
