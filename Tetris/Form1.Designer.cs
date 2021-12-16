@@ -38,6 +38,8 @@
             this.CmdRechts = new System.Windows.Forms.Button();
             this.CmdUnten = new System.Windows.Forms.Button();
             this.CmdLinks = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.score = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // TimTetris
@@ -49,7 +51,7 @@
             // PanUnten
             // 
             this.PanUnten.BackColor = System.Drawing.Color.Black;
-            this.PanUnten.Location = new System.Drawing.Point(24, 337);
+            this.PanUnten.Location = new System.Drawing.Point(25, 336);
             this.PanUnten.Name = "PanUnten";
             this.PanUnten.Size = new System.Drawing.Size(160, 1);
             this.PanUnten.TabIndex = 56;
@@ -57,7 +59,7 @@
             // PanRechts
             // 
             this.PanRechts.BackColor = System.Drawing.Color.Black;
-            this.PanRechts.Location = new System.Drawing.Point(184, 77);
+            this.PanRechts.Location = new System.Drawing.Point(185, 77);
             this.PanRechts.Name = "PanRechts";
             this.PanRechts.Size = new System.Drawing.Size(1, 260);
             this.PanRechts.TabIndex = 55;
@@ -65,14 +67,14 @@
             // PanLinks
             // 
             this.PanLinks.BackColor = System.Drawing.Color.Black;
-            this.PanLinks.Location = new System.Drawing.Point(24, 77);
+            this.PanLinks.Location = new System.Drawing.Point(25, 77);
             this.PanLinks.Name = "PanLinks";
             this.PanLinks.Size = new System.Drawing.Size(1, 260);
             this.PanLinks.TabIndex = 54;
             // 
             // CmdPause
             // 
-            this.CmdPause.Location = new System.Drawing.Point(70, 361);
+            this.CmdPause.Location = new System.Drawing.Point(68, 352);
             this.CmdPause.Name = "CmdPause";
             this.CmdPause.Size = new System.Drawing.Size(70, 28);
             this.CmdPause.TabIndex = 53;
@@ -92,7 +94,7 @@
             // 
             // CmdUnten
             // 
-            this.CmdUnten.Location = new System.Drawing.Point(84, 47);
+            this.CmdUnten.Location = new System.Drawing.Point(85, 39);
             this.CmdUnten.Name = "CmdUnten";
             this.CmdUnten.Size = new System.Drawing.Size(40, 28);
             this.CmdUnten.TabIndex = 51;
@@ -110,11 +112,32 @@
             this.CmdLinks.UseVisualStyleBackColor = true;
             this.CmdLinks.Click += new System.EventHandler(this.CmdLinks_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(25, 402);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 57;
+            this.label1.Text = "Score:";
+            // 
+            // score
+            // 
+            this.score.AutoSize = true;
+            this.score.Location = new System.Drawing.Point(70, 402);
+            this.score.Name = "score";
+            this.score.Size = new System.Drawing.Size(61, 13);
+            this.score.TabIndex = 58;
+            this.score.Text = "Score Here";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(209, 401);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(214, 450);
+            this.Controls.Add(this.score);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.PanUnten);
             this.Controls.Add(this.PanRechts);
             this.Controls.Add(this.PanLinks);
@@ -127,6 +150,7 @@
             this.Text = "Tetris";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -140,6 +164,8 @@
         internal System.Windows.Forms.Button CmdRechts;
         internal System.Windows.Forms.Button CmdUnten;
         internal System.Windows.Forms.Button CmdLinks;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label score;
     }
 }
 

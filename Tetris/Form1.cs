@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
+// Christian Lehnert 2021
+
 namespace Tetris
 {
     public partial class Form1 : Form
@@ -10,7 +12,16 @@ namespace Tetris
         public Form1()
         {
             InitializeComponent();
+            CmdLinks.Text = "◄";
+            CmdRechts.Text = "►";
+            CmdUnten.Text = "▼";
+
+            // Score
+            score.Text = "0";
         }
+
+        /* Score */
+        int scoreValue = 0;
 
         /* Index des aktuellen Panels */
         private int PX;
@@ -30,7 +41,7 @@ namespace Tetris
         /* Ein Feld von Farben für die Panels */
         private readonly Color[] FarbenFeld = {Color.Red, Color.Yellow,
             Color.Green, Color.Blue, Color.Cyan,
-            Color.Magenta, Color.Black, Color.White};
+            Color.Magenta, Color.Black, Color.Aqua};
 
         /* Konstanten für Status eines Feldpunktes */
         private const int Leer = -1;
@@ -94,6 +105,7 @@ namespace Tetris
                 if (PZ == 1)
                 {
                     TimTetris.Enabled = false;
+                    CmdPause.Visible = false;
                     MessageBox.Show("Das war's");
                     return;
                 }
@@ -143,6 +155,13 @@ namespace Tetris
                 Stufe += 1;
                 TimTetris.Interval = 5000 / (Stufe + 9);
 
+                // score setzen
+                scoreValue++;
+
+                // score anzeigen
+                score.Text = $"{scoreValue}";
+
+
                 /* Eventuell kann jetzt noch eine Reihe
                    entfernt werden */
                 AllePruefen();
@@ -162,6 +181,7 @@ namespace Tetris
                         PL[F[Z, S]].BackColor == PL[F[Z, S + 2]].BackColor)
                 {
 
+             
                     for (int SX = S; SX < S + 3; SX++)
                     {
                         /* PL aus dem Formular löschen */
@@ -256,6 +276,14 @@ namespace Tetris
         private void CmdPause_Click(object sender, EventArgs e)
         {
             TimTetris.Enabled = !TimTetris.Enabled;
+
+            if (TimTetris.Enabled)
+            {
+                CmdPause.Text = "Pause";
+            } else
+            {
+                CmdPause.Text = "Weiter";
+            }
         }
     }
 }
