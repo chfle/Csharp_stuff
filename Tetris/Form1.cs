@@ -11,6 +11,9 @@ namespace Tetris
     {
         public Form1()
         {
+             // Set name
+            username = GetName();
+
             InitializeComponent();
             CmdLinks.Text = "◄";
             CmdRechts.Text = "►";
@@ -18,7 +21,11 @@ namespace Tetris
 
             // Score
             score.Text = "0";
-        }
+
+           }
+
+        /* Username */
+        string username = "";
 
         /* Score */
         int scoreValue = 0;
@@ -49,6 +56,28 @@ namespace Tetris
 
         /* Zufallsgenerator erzeugen und initialisieren */
         private readonly Random r = new Random();
+
+        /* Ask user for a name */
+        private string GetName()
+        {
+            Form promt = new Form();
+            promt.Width = 500;
+            promt.Height = 200;
+            promt.Text = "User";
+            Label textLabel = new Label { Left = 50, Top = 20, Text = "Enter your Name" };
+            TextBox textBox = new TextBox { Left = 50, Top = 50, Width = 400 };
+            Button confirmation = new Button() { Text = "Ok", Left = 350, Width = 100, Top = 70 };
+            confirmation.Click += (sender, e) => { promt.Close(); };
+
+            // add stuff
+            promt.Controls.Add(confirmation);
+            promt.Controls.Add(textLabel);
+            promt.Controls.Add(textBox);
+
+            promt.ShowDialog();
+
+            return textBox.Text;
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
