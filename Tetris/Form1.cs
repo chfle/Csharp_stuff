@@ -44,6 +44,35 @@ namespace Tetris
             // set show name
             name.Text = $"{username}";
 
+            // get top score
+
+            try
+            {
+                cmd.CommandText = "Select Score from score ORDER BY Score DESC";
+
+                var reader = cmd.ExecuteReader();
+                bool found = false;
+
+                // set top score
+                while (reader.Read())
+                {
+                    found = true;
+                    top.Text += $"{reader["Score"]}";
+                    break;
+                }
+
+                reader.Close();
+
+                if (!found)
+                {
+                    top.Text += " 0";
+                }
+            } catch
+            {
+                top.Text += " NaN";
+            }
+
+          
         }
 
         // Mysql stuff
