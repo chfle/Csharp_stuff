@@ -45,3 +45,4 @@ C:\Users\ChristianLehnert\Downloads\chsharp_stuff\Tetris\bin\Debug\System.Memory
 C:\Users\ChristianLehnert\Downloads\chsharp_stuff\Tetris\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\ChristianLehnert\Downloads\chsharp_stuff\Tetris\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\ChristianLehnert\Downloads\chsharp_stuff\Tetris\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\ChristianLehnert\Downloads\chsharp_stuff\Tetris\obj\Debug\Tetris.Form2.resources

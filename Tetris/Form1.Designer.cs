@@ -40,6 +40,8 @@
             this.CmdLinks = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.score = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.name = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // TimTetris
@@ -130,12 +132,32 @@
             this.score.TabIndex = 58;
             this.score.Text = "Score Here";
             // 
+            // nameLabel
+            // 
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Location = new System.Drawing.Point(25, 425);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(41, 13);
+            this.nameLabel.TabIndex = 59;
+            this.nameLabel.Text = "Name: ";
+            // 
+            // name
+            // 
+            this.name.AutoSize = true;
+            this.name.Location = new System.Drawing.Point(71, 425);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(61, 13);
+            this.name.TabIndex = 60;
+            this.name.Text = "Name Here";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(214, 450);
+            this.Controls.Add(this.name);
+            this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.score);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PanUnten);
@@ -166,6 +188,8 @@
         internal System.Windows.Forms.Button CmdLinks;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label score;
+        private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.Label name;
     }
 }
 

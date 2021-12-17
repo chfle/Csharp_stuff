@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 // Christian Lehnert 2021
 
@@ -11,6 +12,24 @@ namespace Tetris
     {
         public Form1()
         {
+            // init db
+            string cs = @"server=192.168.55.8;user id=tetris;password=pqjerPCgChu2wvyJvYuXkZxxjHv6RbfE7mqebecz33mURUEv8K!123;database=tetris";
+
+
+            try
+            {
+                conn = new MySqlConnection(cs);
+                cmd = new MySqlCommand();
+
+                cmd.Connection = conn;
+
+                conn.Open();
+            } catch (Exception ex)
+            {
+                MessageBox.Show($"Something went wrong\n Error: {ex.Message}");
+                return;
+            }
+
              // Set name
             username = GetName();
 
@@ -21,9 +40,16 @@ namespace Tetris
 
             // Score
             score.Text = "0";
+            
+            // set show name
+            name.Text = $"{username}";
 
-           }
+        }
 
+        // Mysql stuff
+        MySqlConnection conn = null;
+        MySqlCommand cmd = null;
+       
         /* Username */
         string username = "";
 
@@ -67,7 +93,12 @@ namespace Tetris
             Label textLabel = new Label { Left = 50, Top = 20, Text = "Enter your Name" };
             TextBox textBox = new TextBox { Left = 50, Top = 50, Width = 400 };
             Button confirmation = new Button() { Text = "Ok", Left = 350, Width = 100, Top = 70 };
-            confirmation.Click += (sender, e) => { promt.Close(); };
+            confirmation.Click += (sender, e) => {
+                if (textBox.Text.Trim().Length > 0)
+                {
+                   promt.Close();
+                }
+            };
 
             // add stuff
             promt.Controls.Add(confirmation);
@@ -135,7 +166,47 @@ namespace Tetris
                 {
                     TimTetris.Enabled = false;
                     CmdPause.Visible = false;
-                    MessageBox.Show("Das war's");
+                  
+
+                    // Ask user if he wanna save his score
+                    DialogResult result = MessageBox.Show("Game Over! Do you wanna save your score?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        // try to add user 
+                        try
+                        {
+                            cmd.CommandText = $"INSERT INTO score (Name,Score) Values('{name}', {scoreValue});";
+                            cmd.ExecuteNonQuery();
+                        } catch
+                        {
+                            MessageBox.Show("User exists! Updating score...");
+                            try
+                            {
+                                // update user if
+                                cmd.CommandText = $"SELECT Score from score where Name={name};";
+
+                                var reader = cmd.ExecuteReader();
+
+                                reader.Read();
+
+                                var value = Int64.Parse(reader.ToString());
+
+                                reader.Close();
+
+                                // update score if higher
+                                if (scoreValue > value)
+                                {
+                                    cmd.CommandText = $"Update score SET Score = {scoreValue} where Name={name}";
+                                }
+
+                            } catch
+                            {
+                                MessageBox.Show("Cant read user");
+                            }
+                        }
+                    }
+
                     return;
                 }
 
