@@ -74,7 +74,7 @@ namespace Tetris
         /* Ein Feld von Farben für die Panels */
         private readonly Color[] FarbenFeld = {Color.Red, Color.Yellow,
             Color.Green, Color.Blue, Color.Cyan,
-            Color.Magenta, Color.Black, Color.Aqua};
+            Color.Magenta, Color.Black, Color.White};
 
         /* Konstanten für Status eines Feldpunktes */
         private const int Leer = -1;
@@ -91,10 +91,13 @@ namespace Tetris
             promt.Height = 200;
             promt.Text = "User";
             Label textLabel = new Label { Left = 50, Top = 20, Text = "Enter your Name" };
-            TextBox textBox = new TextBox { Left = 50, Top = 50, Width = 400 };
+            TextBox textBox = new TextBox { Left = 50, Top = 50, Width = 400, Text=""};
             Button confirmation = new Button() { Text = "Ok", Left = 350, Width = 100, Top = 70 };
+
+
             confirmation.Click += (sender, e) => {
-                if (textBox.Text.Trim().Length > 0)
+                var n = textBox.Text;
+                if (n.Trim().Length > 0)
                 {
                    promt.Close();
                 }
@@ -107,7 +110,9 @@ namespace Tetris
 
             promt.ShowDialog();
 
-            return textBox.Text;
+            var name = textBox.Text;
+
+            return name;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -176,7 +181,7 @@ namespace Tetris
                         // try to add user 
                         try
                         {
-                            cmd.CommandText = $"INSERT INTO score (Name,Score) Values('{name}', {scoreValue});";
+                            cmd.CommandText = $"INSERT INTO score (Name,Score) Values('{username}', {scoreValue});";
                             cmd.ExecuteNonQuery();
                         } catch
                         {
@@ -184,25 +189,26 @@ namespace Tetris
                             try
                             {
                                 // update user if
-                                cmd.CommandText = $"SELECT Score from score where Name={name};";
+                                cmd.CommandText = $"SELECT * FROM score where Name='{username}';";
 
                                 var reader = cmd.ExecuteReader();
 
                                 reader.Read();
 
-                                var value = Int64.Parse(reader.ToString());
+                                var value = Int64.Parse(reader["Score"].ToString());
 
                                 reader.Close();
 
                                 // update score if higher
                                 if (scoreValue > value)
                                 {
-                                    cmd.CommandText = $"Update score SET Score = {scoreValue} where Name={name}";
+                                    cmd.CommandText = $"Update score SET Score = {scoreValue} where Name='{username}'";
+                                    cmd.ExecuteNonQuery();
                                 }
 
-                            } catch
+                            } catch (Exception ex)
                             {
-                                MessageBox.Show("Cant read user");
+                                MessageBox.Show("Cant read user" + ex.Message);
                             }
                         }
                     }
