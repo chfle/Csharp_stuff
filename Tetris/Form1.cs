@@ -16,7 +16,7 @@ namespace Tetris
             string cs = @"server=192.168.55.8;user id=tetris;password=pqjerPCgChu2wvyJvYuXkZxxjHv6RbfE7mqebecz33mURUEv8K!123;database=tetris";
 
 
-            try
+             try
             {
                 conn = new MySqlConnection(cs);
                 cmd = new MySqlCommand();
@@ -52,6 +52,9 @@ namespace Tetris
        
         /* Username */
         string username = "";
+
+        /* Form2 */
+        Form2 form2 = null;
 
         /* Score */
         int scoreValue = 0;
@@ -377,6 +380,23 @@ namespace Tetris
             F[PZ, PS] = PX;       // Belegen
             AllePruefen();
             NaechstesPanel();
+        }
+
+        private void scoreOpen_Click(object sender, EventArgs e)
+        {
+            if (form2 != null && !form2.IsDisposed)
+            {
+                return;
+            }
+
+            if (form2 == null) {
+                form2 = new Form2();
+            } else if (form2.IsDisposed)
+            {
+                form2 = new Form2();
+            }
+
+            form2.Show();
         }
 
         private void CmdPause_Click(object sender, EventArgs e)

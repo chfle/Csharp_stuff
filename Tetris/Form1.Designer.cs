@@ -42,6 +42,7 @@
             this.score = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.Label();
+            this.scoreOpen = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TimTetris
@@ -150,12 +151,23 @@
             this.name.TabIndex = 60;
             this.name.Text = "Name Here";
             // 
+            // scoreOpen
+            // 
+            this.scoreOpen.Location = new System.Drawing.Point(141, 400);
+            this.scoreOpen.Name = "scoreOpen";
+            this.scoreOpen.Size = new System.Drawing.Size(71, 41);
+            this.scoreOpen.TabIndex = 61;
+            this.scoreOpen.Text = "Show Scoreboard";
+            this.scoreOpen.UseVisualStyleBackColor = true;
+            this.scoreOpen.Click += new System.EventHandler(this.scoreOpen_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(214, 450);
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ClientSize = new System.Drawing.Size(232, 450);
+            this.Controls.Add(this.scoreOpen);
             this.Controls.Add(this.name);
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.score);
@@ -190,6 +202,7 @@
         private System.Windows.Forms.Label score;
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.Label name;
+        private System.Windows.Forms.Button scoreOpen;
     }
 }
 
